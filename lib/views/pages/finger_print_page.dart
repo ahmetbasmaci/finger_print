@@ -8,6 +8,8 @@ import '../../services/theme_service.dart';
 import '../components/components.dart';
 
 class FingerPrint extends GetView<ThemeCtr> {
+  static const id = 'FingerPrint';
+
   FingerPrint({super.key});
   FingerPrintCtr fingerPrintCtr = Get.find<FingerPrintCtr>();
   @override

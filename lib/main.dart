@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'constents/app_settings.dart';
 import 'constents/controllers_binding.dart';
 import 'services/theme_service.dart';
+import 'views/pages/finger_print_page.dart';
 import 'views/pages/home_page.dart';
 
 void main() async {
@@ -10,7 +11,7 @@ void main() async {
   //await Firebase.initializeApp();
   WidgetsFlutterBinding.ensureInitialized();
   // Get.put(MyLocalCtr());
-  Get.put(ThemeCtr());
+  //Get.put(ThemeCtr());
 
   runApp(MyApp());
 }
@@ -30,14 +31,15 @@ class MyApp extends StatelessWidget {
       // translations: MyLocale(),
       routes: {
         HomePage.id: (context) => HomePage(), //'/${HomePage.id}'
+        FingerPrint.id: (context) => FingerPrint(),
       },
-      // home: DebouncedSearchBar(),
-      initialRoute: HomePage.id,
+       home: HomePage(),
+      //initialRoute: HomePage.id,
       // initialRoute: HelperMethods.isInDebugMode ? HelperMethods.getNewOpendPageId() : SplashPage.id,
       debugShowCheckedModeBanner: false,
-      theme: Get.find<ThemeCtr>().lightThemeMode.value,
-      darkTheme: Get.find<ThemeCtr>().darkThemeMode.value,
-      themeMode:ThemeMode.light,
+      theme: ThemeCtr().lightThemeMode.value,
+      darkTheme: ThemeCtr().darkThemeMode.value,
+      themeMode: ThemeMode.light,
     );
   }
 }

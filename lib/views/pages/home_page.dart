@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shazely_book/constents/my_colors.dart';
 import 'package:shazely_book/constents/my_texts.dart';
-import 'package:shazely_book/controllers/home_ctr.dart';
 import 'package:shazely_book/services/theme_service.dart';
 import 'package:shazely_book/views/pages/finger_print_page.dart';
 
@@ -12,10 +11,10 @@ import '../components/components.dart';
 class HomePage extends GetView<ThemeCtr> {
   static const id = 'HomePage';
   HomePage({super.key});
-  HomePageCtr homeCtr = Get.find<HomePageCtr>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: MyColors.backgroundDark,
       body: Container(
         width: Get.width,
         height: Get.height,
