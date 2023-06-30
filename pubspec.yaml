@@ -1,0 +1,40 @@
+name: shazely_book
+description: A new Flutter project.
+publish_to: 'none'
+version: 1.0.0+0
+
+environment:
+  sdk: '>=3.0.3 <4.0.0'
+
+dependencies:
+  animated_button: ^0.2.0
+  animated_text_kit: ^4.2.2
+  audioplayers: ^4.1.0
+  confetti: ^0.7.0
+  cupertino_icons: ^1.0.2
+  flutter:
+    sdk: flutter
+  flutter_launcher_icons: ^0.13.1
+  fluttertoast: ^8.2.2
+  get: ^4.6.5
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/audio/
+    - assets/images/
+
+  fonts:
+    - family: uthmanic
+      fonts:
+        - asset: assets/fonts/UthmanicHafs_V20.ttf
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/app_logo.png"
