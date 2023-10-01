@@ -1,18 +1,46 @@
 import 'package:animated_button/animated_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:shazely_book/constents/my_colors.dart';
 import 'package:shazely_book/constents/my_texts.dart';
-import 'package:shazely_book/services/theme_service.dart';
+import 'package:shazely_book/services/ads_service.dart';
+import 'package:shazely_book/views/pages/ads_widgets.dart';
 import 'package:shazely_book/views/pages/finger_print_page.dart';
 
 import '../components/components.dart';
 
-class HomePage extends GetView<ThemeCtr> {
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
   static const id = 'HomePage';
-  HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    super.initState();
+    if (AdsService.bannerAd == null) AdsService.createBannerId();
+    if (AdsService.rewardedAd == null) AdsService.createRewardedId();
+  }
+
+  @override
+  void dispose() {
+    AdsService.disposeAds();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
+    // if (AdsService.rewardedAd == null) {
+    //   AdsService.createRewardedId();
+    // } else {
+    //   AdsService.rewardedAd?.show(
+    //     onUserEarnedReward: (_, reward) {},
+    //   );
+    // }
     return Scaffold(
       backgroundColor: MyColors.backgroundDark,
       body: Container(
@@ -28,6 +56,7 @@ class HomePage extends GetView<ThemeCtr> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            //  AdsWidgets.bannerWidget(),
             fingerPrintPart(),
             MyTexts.main(
               title: "جهاز كشف الكذب",
@@ -40,7 +69,12 @@ class HomePage extends GetView<ThemeCtr> {
               width: Get.width * 0.8,
               color: MyColors.backgroundDark,
               onPressed: () {
-                Get.to(FingerPrint());
+                if (AdsService.rewardedAd == null) {
+                  AdsService.createRewardedId();
+                }
+                AdsService.rewardedAd?.show(onUserEarnedReward: (_, reward) {
+                  Get.to(FingerPrint());
+                });
               },
               child: MyTexts.main(
                 title: "إبدأ الآن",
@@ -51,6 +85,7 @@ class HomePage extends GetView<ThemeCtr> {
           ],
         ),
       ),
+      //bottomNavigationBar: AdsWidgets.bannerWidget(),
     );
   }
 }

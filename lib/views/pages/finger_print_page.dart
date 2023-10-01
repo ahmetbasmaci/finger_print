@@ -2,6 +2,8 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:confetti/confetti.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shazely_book/services/ads_service.dart';
+import 'package:shazely_book/views/pages/ads_widgets.dart';
 import '../../constents/my_texts.dart';
 import '../../controllers/finger_print_ctr.dart';
 import '../../services/theme_service.dart';
@@ -12,8 +14,17 @@ class FingerPrint extends GetView<ThemeCtr> {
 
   FingerPrint({super.key});
   FingerPrintCtr fingerPrintCtr = Get.find<FingerPrintCtr>();
+
   @override
   Widget build(BuildContext context) {
+    // if (AdsService.rewardedAd == null) {
+    //   AdsService.createRewardedId();
+    // } else {
+    //   AdsService.rewardedAd?.show(
+    //     onUserEarnedReward: (_, reward) {},
+    //   );
+    // }
+    if (AdsService.bannerAd == null) AdsService.createBannerId();
     return Scaffold(
       body: Stack(
         children: [
@@ -50,6 +61,7 @@ class FingerPrint extends GetView<ThemeCtr> {
           ),
         ],
       ),
+      bottomNavigationBar: AdsWidgets.bannerWidget(),
     );
   }
 
