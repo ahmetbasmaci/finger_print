@@ -54,6 +54,7 @@ class AdsService {
 
   static String get rewardedId {
     if (_isTestMode) return _rewardTestId;
+
     if (Platform.isAndroid)
       return _rewardId_android;
     else if (Platform.isIOS) return "";
@@ -139,8 +140,8 @@ class AdsService {
   }
 
   static void disposeAds() {
-    bannerAd?.dispose();
-    rewardedAd?.dispose();
+    // bannerAd?.dispose();
+    // rewardedAd?.dispose();
     bannerAd = null;
     rewardedAd = null;
   }

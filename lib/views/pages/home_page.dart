@@ -1,7 +1,6 @@
 import 'package:animated_button/animated_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:shazely_book/constents/my_colors.dart';
 import 'package:shazely_book/constents/my_texts.dart';
 import 'package:shazely_book/services/ads_service.dart';
@@ -72,9 +71,13 @@ class _HomePageState extends State<HomePage> {
                 if (AdsService.rewardedAd == null) {
                   AdsService.createRewardedId();
                 }
-                AdsService.rewardedAd?.show(onUserEarnedReward: (_, reward) {
+                try {
+                  AdsService.rewardedAd!.show(onUserEarnedReward: (_, reward) {
+                    Get.to(FingerPrint());
+                  });
+                } catch (e) {
                   Get.to(FingerPrint());
-                });
+                }
               },
               child: MyTexts.main(
                 title: "إبدأ الآن",
@@ -85,7 +88,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      //bottomNavigationBar: AdsWidgets.bannerWidget(),
+      bottomNavigationBar: AdsWidgets.bannerWidget(),
     );
   }
 }
