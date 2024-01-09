@@ -1,4 +1,4 @@
-# Finger Print laying checker
+# Finger Print Lying Checker
 
 ![Project Logo](https://github.com/ahmetbasmaci/finger_print/assets/96287253/c24c7d90-5de9-4ca5-a9ae-ffa163f3752b)
 <a href="https://play.google.com/store/apps/details?id=com.ahmet.zad_almumin">
