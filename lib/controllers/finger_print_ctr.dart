@@ -1,10 +1,11 @@
 import 'dart:math';
 import 'package:animated_button/animated_button.dart';
 import 'package:confetti/confetti.dart';
+import 'package:finger_print/constents/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:shazely_book/constents/my_texts.dart';
-import 'package:shazely_book/models/enums.dart';
+import 'package:finger_print/constents/my_texts.dart';
+import 'package:finger_print/models/enums.dart';
 import '../constents/my_colors.dart';
 import 'audio_ctr.dart';
 
@@ -32,12 +33,12 @@ class FingerPrintCtr extends GetxController {
     int random = Random().nextInt(2); //0-1
     AudioType audioType = random == 1 ? AudioType.correct : AudioType.wrong;
     if (random == 1) {
-      answer.value = "تهانينا أنت صادق 🎉🎉🎉 ";
+      answer.value = AppStrings.congratulationsYouAreSincere;
       animateAnswerColor(_tureAnswerColor);
 
       confettiCtr.play();
     } else {
-      answer.value = "أنت كاذب 😔😔😔";
+      answer.value = AppStrings.youAreALiar;
       animateAnswerColor(_falseAnswerColor);
     }
     Get.find<AudioCtr>().playAudio(audioType);
@@ -82,7 +83,7 @@ class FingerPrintCtr extends GetxController {
 
   Future<void> showDialog() async {
     await Get.defaultDialog(
-      title: "نتيجة الفحص",
+      title: AppStrings.examinationResults,
       backgroundColor: MyColors.backgroundDark,
       content: Column(
         children: [
@@ -94,7 +95,7 @@ class FingerPrintCtr extends GetxController {
             height: Get.height * 0.05,
             onPressed: () => Get.back(),
             child: MyTexts.main(
-              title: "إغلاق",
+              title: AppStrings.close,
               color: MyColors.whiteBlackReversed(),
             ),
           )

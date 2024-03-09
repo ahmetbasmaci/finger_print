@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       initialBinding: ControllerBinding(),
       navigatorKey: AppSettings.navigatorKey,
-      locale: Locale("ar"),
+      locale: Locale("en"),
       routes: {
         HomePage.id: (context) => HomePage(), //'/${HomePage.id}'
         FingerPrint.id: (context) => FingerPrint(),
