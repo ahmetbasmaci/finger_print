@@ -1,4 +1,4 @@
-package com.example.shazely_book
+package com.example.finger_print
 
 import io.flutter.embedding.android.FlutterActivity
 

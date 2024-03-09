@@ -3,8 +3,8 @@ import 'package:animated_button/animated_button.dart';
 import 'package:confetti/confetti.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:shazely_book/constents/my_texts.dart';
-import 'package:shazely_book/models/enums.dart';
+import 'package:finger_print/constents/my_texts.dart';
+import 'package:finger_print/models/enums.dart';
 import '../constents/my_colors.dart';
 import 'audio_ctr.dart';
 

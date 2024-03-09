@@ -1,11 +1,11 @@
 import 'package:animated_button/animated_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:shazely_book/constents/my_colors.dart';
-import 'package:shazely_book/constents/my_texts.dart';
-import 'package:shazely_book/services/ads_service.dart';
-import 'package:shazely_book/views/pages/ads_widgets.dart';
-import 'package:shazely_book/views/pages/finger_print_page.dart';
+import 'package:finger_print/constents/my_colors.dart';
+import 'package:finger_print/constents/my_texts.dart';
+import 'package:finger_print/services/ads_service.dart';
+import 'package:finger_print/views/pages/ads_widgets.dart';
+import 'package:finger_print/views/pages/finger_print_page.dart';
 
 import '../components/components.dart';
 

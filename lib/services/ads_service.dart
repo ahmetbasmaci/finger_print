@@ -4,13 +4,11 @@ import 'dart:io';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 class AdsService {
-  static bool get _isInDebugMode {
+  static bool get _isTestMode {
     bool inDebugMode = false;
     assert(inDebugMode = true);
     return inDebugMode;
   }
-
-  static bool get _isTestMode => _isInDebugMode ? true : false;
 
   static const String _appTestId = "ca-app-pub-3940256099942544~3347511713";
   static const String _bannerTestId = "ca-app-pub-3940256099942544/6300978111";
@@ -98,14 +96,15 @@ class AdsService {
     },
   );
 
-  static void createBannerId() {
+  static Future<void> createBannerId() async {
     bannerAd = BannerAd(
       size: AdSize.fullBanner,
       adUnitId: bannerId,
       listener: bannerAdListener,
       request: AdRequest(),
     )..load();
-    // _bannerAd!.load();
+    // await bannerAd?.load();
+    await Future.delayed(Duration(seconds: 1));
   }
 
   static void createRewardedId() async {
