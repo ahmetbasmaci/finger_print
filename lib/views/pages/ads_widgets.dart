@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:finger_print/services/ads_service.dart';
+import '../../services/ads_service.dart';
 
 class AdsWidgets {
   static Widget bannerWidget() {

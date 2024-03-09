@@ -1,10 +1,10 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:confetti/confetti.dart';
-import 'package:finger_print/constents/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:finger_print/services/ads_service.dart';
-import 'package:finger_print/views/pages/ads_widgets.dart';
+import '../../constents/app_strings.dart';
+import '../../services/ads_service.dart';
+import 'ads_widgets.dart';
 import '../../constents/my_texts.dart';
 import '../../controllers/finger_print_ctr.dart';
 import '../../services/theme_service.dart';
