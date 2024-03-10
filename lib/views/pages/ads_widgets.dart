@@ -10,6 +10,11 @@ class AdsWidgets {
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
           return Container(
+    return FutureBuilder(
+      future: AdsService.createBannerId(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.done) {
+          return Container(
             margin: const EdgeInsets.all(12),
             height: 50,
             child: AdWidget(

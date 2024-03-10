@@ -34,10 +34,12 @@ class FingerPrintCtr extends GetxController {
     AudioType audioType = random == 1 ? AudioType.correct : AudioType.wrong;
     if (random == 1) {
       answer.value = AppStrings.congratulationsYouAreSincere;
+      answer.value = AppStrings.congratulationsYouAreSincere;
       animateAnswerColor(_tureAnswerColor);
 
       confettiCtr.play();
     } else {
+      answer.value = AppStrings.youAreALiar;
       answer.value = AppStrings.youAreALiar;
       animateAnswerColor(_falseAnswerColor);
     }
@@ -84,6 +86,7 @@ class FingerPrintCtr extends GetxController {
   Future<void> showDialog() async {
     await Get.defaultDialog(
       title: AppStrings.examinationResults,
+      title: AppStrings.examinationResults,
       backgroundColor: MyColors.backgroundDark,
       content: Column(
         children: [
@@ -95,6 +98,7 @@ class FingerPrintCtr extends GetxController {
             height: Get.height * 0.05,
             onPressed: () => Get.back(),
             child: MyTexts.main(
+              title: AppStrings.close,
               title: AppStrings.close,
               color: MyColors.whiteBlackReversed(),
             ),

@@ -60,6 +60,7 @@ class _HomePageState extends State<HomePage> {
             fingerPrintPart(),
             MyTexts.main(
               title: AppStrings.lieDetectorDevice,
+              title: AppStrings.lieDetectorDevice,
               color: Colors.white,
               size: 30.0,
               fontWeight: FontWeight.bold,
@@ -81,6 +82,7 @@ class _HomePageState extends State<HomePage> {
                 }
               },
               child: MyTexts.main(
+                title: AppStrings.startNow,
                 title: AppStrings.startNow,
                 color: Colors.white,
                 size: 30.0,

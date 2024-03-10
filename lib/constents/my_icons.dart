@@ -2,6 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
 import 'app_settings.dart';
 import 'my_colors.dart';
 import 'my_sizes.dart';
