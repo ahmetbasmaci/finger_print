@@ -1,4 +1,5 @@
 import 'package:animated_button/animated_button.dart';
+import 'package:finger_print/constents/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:finger_print/constents/my_colors.dart';
@@ -58,7 +59,7 @@ class _HomePageState extends State<HomePage> {
             //  AdsWidgets.bannerWidget(),
             fingerPrintPart(),
             MyTexts.main(
-              title: "جهاز كشف الكذب",
+              title: AppStrings.lieDetectorDevice,
               color: Colors.white,
               size: 30.0,
               fontWeight: FontWeight.bold,
@@ -80,7 +81,7 @@ class _HomePageState extends State<HomePage> {
                 }
               },
               child: MyTexts.main(
-                title: "إبدأ الآن",
+                title: AppStrings.startNow,
                 color: Colors.white,
                 size: 30.0,
               ),

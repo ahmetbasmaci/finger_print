@@ -1,5 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:confetti/confetti.dart';
+import 'package:finger_print/constents/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:finger_print/services/ads_service.dart';
@@ -107,14 +108,18 @@ class FingerPrint extends GetView<ThemeCtr> {
         child: Obx(
           () => fingerPrintCtr.isTapping.value
               ? DefaultTextStyle(
-                  style: TextStyle(fontSize: 30.0),
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 23.0,
+                  ),
                   child: AnimatedTextKit(
                     repeatForever: true,
                     pause: Duration(milliseconds: 10),
                     animatedTexts: [
-                      ScaleAnimatedText('جاري الفحص...', duration: Duration(milliseconds: 1500)),
-                      ScaleAnimatedText('جار تحليل البصمة...', duration: Duration(milliseconds: 1500)),
-                      ScaleAnimatedText('جاري التحقق من البصمة...', duration: Duration(milliseconds: 1500)),
+                      ScaleAnimatedText(AppStrings.processingInspection, duration: Duration(milliseconds: 1500)),
+                      ScaleAnimatedText(AppStrings.fingerprintAnalysisInProgress,
+                          duration: Duration(milliseconds: 1500)),
+                      ScaleAnimatedText(AppStrings.verifyingDingerprint, duration: Duration(milliseconds: 1500)),
                     ],
                   ),
                 )
