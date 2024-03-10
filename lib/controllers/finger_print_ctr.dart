@@ -1,11 +1,11 @@
 import 'dart:math';
 import 'package:animated_button/animated_button.dart';
 import 'package:confetti/confetti.dart';
-import 'package:finger_print/constents/app_strings.dart';
+import '../constents/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:finger_print/constents/my_texts.dart';
-import 'package:finger_print/models/enums.dart';
+import '../constents/my_texts.dart';
+import '../models/enums.dart';
 import '../constents/my_colors.dart';
 import 'audio_ctr.dart';
 
@@ -86,7 +86,6 @@ class FingerPrintCtr extends GetxController {
   Future<void> showDialog() async {
     await Get.defaultDialog(
       title: AppStrings.examinationResults,
-      title: AppStrings.examinationResults,
       backgroundColor: MyColors.backgroundDark,
       content: Column(
         children: [
@@ -98,7 +97,6 @@ class FingerPrintCtr extends GetxController {
             height: Get.height * 0.05,
             onPressed: () => Get.back(),
             child: MyTexts.main(
-              title: AppStrings.close,
               title: AppStrings.close,
               color: MyColors.whiteBlackReversed(),
             ),

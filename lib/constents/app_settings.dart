@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class AppSettings {
-
-
   static GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
   static GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>(); // Create a key to can open drawer
 

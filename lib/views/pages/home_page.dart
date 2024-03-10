@@ -1,12 +1,12 @@
 import 'package:animated_button/animated_button.dart';
-import 'package:finger_print/constents/app_strings.dart';
+import '../../constents/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:finger_print/constents/my_colors.dart';
-import 'package:finger_print/constents/my_texts.dart';
-import 'package:finger_print/services/ads_service.dart';
-import 'package:finger_print/views/pages/ads_widgets.dart';
-import 'package:finger_print/views/pages/finger_print_page.dart';
+import '../../constents/my_colors.dart';
+import '../../constents/my_texts.dart';
+import '../../services/ads_service.dart';
+import 'ads_widgets.dart';
+import 'finger_print_page.dart';
 
 import '../components/components.dart';
 
@@ -60,7 +60,6 @@ class _HomePageState extends State<HomePage> {
             fingerPrintPart(),
             MyTexts.main(
               title: AppStrings.lieDetectorDevice,
-              title: AppStrings.lieDetectorDevice,
               color: Colors.white,
               size: 30.0,
               fontWeight: FontWeight.bold,
@@ -82,7 +81,6 @@ class _HomePageState extends State<HomePage> {
                 }
               },
               child: MyTexts.main(
-                title: AppStrings.startNow,
                 title: AppStrings.startNow,
                 color: Colors.white,
                 size: 30.0,
