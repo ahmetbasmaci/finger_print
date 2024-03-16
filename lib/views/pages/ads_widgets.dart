@@ -4,7 +4,8 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 import '../../services/ads_service.dart';
 
 class AdsWidgets {
-  static Widget bannerWidget() {
+  static Widget ?bannerWidget() {
+    if (AdsService.dontUseAdds) return null;
     return FutureBuilder(
       future: AdsService.createBannerId(),
       builder: (context, snapshot) {
