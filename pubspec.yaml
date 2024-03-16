@@ -1,7 +1,7 @@
 name: finger_print
 description: A new Flutter project.
 publish_to: 'none'
-version: 1.0.0+6
+version: 1.0.0+0
 
 environment:
   sdk: '>=3.0.3 <4.0.0'
