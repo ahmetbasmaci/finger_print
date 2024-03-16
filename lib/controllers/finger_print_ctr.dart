@@ -21,7 +21,7 @@ class FingerPrintCtr extends GetxController {
   int tappingSecondCounter = 0;
   int tappingMaxSecond = 4;
   RxDouble tappingProgressTopPosition = 0.0.obs;
-  double progressMaxPositionValue = Get.width * 0.45;
+  //double progressMaxPositionValue = 0;
   ConfettiController confettiCtr = ConfettiController(duration: Duration(seconds: 1));
   bool get isWillGetAnswer => tappingSecondCounter == tappingMaxSecond;
 
@@ -45,13 +45,13 @@ class FingerPrintCtr extends GetxController {
     confettiCtr.stop();
   }
 
-  void startTapping() async {
+  void startTapping(double progressMaxPositionValue) async {
     isTapping.value = true;
     answer.value = "";
     tappingSecondCounter = 0;
     leftAnswerColor.value = _defaultAnswerColor;
     rigthAnswerColor.value = _defaultAnswerColor;
-    updateTappingProgressPosition();
+    updateTappingProgressPosition(progressMaxPositionValue);
     while (isTapping.value) {
       if (isWillGetAnswer) {
         setAnswer();
@@ -62,7 +62,7 @@ class FingerPrintCtr extends GetxController {
     }
   }
 
-  void updateTappingProgressPosition() async {
+  void updateTappingProgressPosition(double progressMaxPositionValue) async {
     while (isTapping.value) {
       if (tappingProgressTopPosition.value < progressMaxPositionValue)
         tappingProgressTopPosition.value += progressMaxPositionValue;

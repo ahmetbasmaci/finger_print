@@ -56,6 +56,7 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             //  AdsWidgets.bannerWidget(),
+
             fingerPrintPart(),
             MyTexts.main(
               title: "جهاز كشف الكذب",

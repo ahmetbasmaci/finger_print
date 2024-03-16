@@ -1,7 +1,7 @@
 name: finger_print
 description: A new Flutter project.
 publish_to: 'none'
-version: 1.0.0+6
+version: 1.0.0+7
 
 environment:
   sdk: '>=3.0.3 <4.0.0'
@@ -9,18 +9,18 @@ environment:
 dependencies:
   animated_button: ^0.2.0
   animated_text_kit: ^4.2.2
-  audioplayers: ^4.1.0
+  audioplayers: ^5.2.1
   confetti: ^0.7.0
-  cupertino_icons: ^1.0.2
+  cupertino_icons: ^1.0.6
   flutter:
     sdk: flutter
   flutter_launcher_icons: ^0.13.1
-  fluttertoast: ^8.2.2
-  get: ^4.6.5
-  google_mobile_ads: ^3.0.0
+  fluttertoast: ^8.2.4
+  get: ^4.6.6
+  google_mobile_ads: ^4.0.0
 
 dev_dependencies:
-  flutter_lints: ^2.0.0
+  flutter_lints: ^3.0.1
   flutter_test:
     sdk: flutter
 
