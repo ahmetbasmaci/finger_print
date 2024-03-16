@@ -167,7 +167,7 @@ class FingerPrint extends GetView<ThemeCtr> {
   }
 
   void onTapDown(TapDownDetails details) async {
-    fingerPrintCtr.startTapping();
+    fingerPrintCtr.startTapping(Get.width * 0.45);
   }
 
   void onTapUp(TapUpDetails details) {

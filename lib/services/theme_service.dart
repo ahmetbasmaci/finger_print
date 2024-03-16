@@ -33,7 +33,6 @@ class ThemeCtr extends GetxController {
   Rx<ThemeData> darkThemeMode = ThemeData.dark().obs;
   Rx<ThemeData> currentThemeMode = ThemeData().obs;
   void updateThemes() {
-
     updateTextStyles();
 
     lightThemeMode.value = ThemeData.light().copyWith(
@@ -175,21 +174,21 @@ class ThemeCtr extends GetxController {
   void updateTextStyles() {
     String defaultFontMain = MyFonts.uthmanic.name;
     bodySmall_main = TextStyle(
-      fontSize: Get.width * .04,
+      fontSize: 20,
       height: 1.8,
       wordSpacing: 5.5,
       fontWeight: FontWeight.w500,
       fontFamily: defaultFontMain,
     );
     bodySmall_quran = TextStyle(
-      fontSize: Get.width * .04,
+      fontSize: 20,
       height: 1.8,
       wordSpacing: 5.5,
       fontWeight: FontWeight.w500,
       fontFamily: defaultFontMain,
     );
     bodyMedium_zikrTitle = TextStyle(
-      fontSize: Get.width * .04,
+      fontSize: 20,
       fontWeight: FontWeight.bold,
       fontFamily: defaultFontMain,
     );
@@ -201,7 +200,7 @@ class ThemeCtr extends GetxController {
     );
 
     bodyLarge_blockTitle = TextStyle(
-      fontSize: Get.width * .04,
+      fontSize: 20,
       fontWeight: FontWeight.bold,
       fontFamily: defaultFontMain,
     );
@@ -245,5 +244,4 @@ class ThemeCtr extends GetxController {
       fontFamily: defaultFontMain,
     );
   }
-
 }
