@@ -8,4 +8,6 @@ class AppStrings {
   static const String youAreALiar = "You are a liar 😡😡😡";
   static const String examinationResults = "Examination results";
   static const String close = "Close";
+  static const String waiting = "Waiting...";
+  static const String field = "Field: ";
 }

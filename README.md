@@ -1,16 +1,23 @@
-# shazely_book
+<<<<<<< HEAD
+# finger_print
+=======
+# Finger Print Lying Checker
+>>>>>>> 036cf5e380bb7eb25264bdeb362840514f38b3de
 
-A new Flutter project.
+![Project Logo](https://github.com/ahmetbasmaci/finger_print/assets/96287253/c24c7d90-5de9-4ca5-a9ae-ffa163f3752b)
+<a href="https://play.google.com/store/apps/details?id=com.ahmet.zad_almumin">
+  <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Get it on Google Play" height="80">
+</a>
 
-## Getting Started
+It is a simple app, and as a matter of entertainment, you can use it to spend quality time with your friends😁
 
-This project is a starting point for a Flutter application.
+## Table of Contents
+- Packages
+- Direct Link On Google Play
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Packages
+- animated_text_kit: ^4.2.2
+- audioplayers: ^4.1.0
+- confetti: ^0.7.0
+- get: ^4.6.5
+- google_mobile_ads: ^3.0.0

@@ -1,13 +1,12 @@
 import 'package:animated_button/animated_button.dart';
+import '../../constents/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../constents/my_colors.dart';
 import '../../constents/my_texts.dart';
+import '../../services/ads_service.dart';
 import 'ads_widgets.dart';
 import 'finger_print_page.dart';
-
-import '../../constents/app_strings.dart';
-import '../../constents/my_colors.dart';
-import '../../services/ads_service.dart';
 import '../components/components.dart';
 
 class HomePage extends StatefulWidget {
@@ -22,8 +21,7 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    if (AdsService.bannerAd == null) AdsService.createBannerId();
-    if (AdsService.rewardedAd == null) AdsService.createRewardedId();
+    AdsService.createAdds();
   }
 
   @override
@@ -69,16 +67,7 @@ class _HomePageState extends State<HomePage> {
               width: Get.width * 0.8,
               color: MyColors.backgroundDark,
               onPressed: () {
-                if (AdsService.rewardedAd == null) {
-                  AdsService.createRewardedId();
-                }
-                try {
-                  AdsService.rewardedAd!.show(onUserEarnedReward: (_, reward) {
-                    Get.to(FingerPrint());
-                  });
-                } catch (e) {
-                  Get.to(FingerPrint());
-                }
+                AdsService.showRewardedAdd(onDone: () => Get.to(FingerPrint()));
               },
               child: MyTexts.main(
                 title: AppStrings.startNow,

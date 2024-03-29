@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="جهاز كشف الكذب"
+        android:label="Lie Detector Device"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
         android:usesCleartextTraffic="true">
@@ -32,9 +32,9 @@
             android:name="flutterEmbedding"
             android:value="2" />
             
-            <meta-data
+            <!-- <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-8440997669688345~2341588342"/>
+            android:value="ca-app-pub-8440997669688345~2341588342"/> -->
             <!-- ca-app-pub-3940256099942544~3347511713 -->
     </application>
 </manifest>

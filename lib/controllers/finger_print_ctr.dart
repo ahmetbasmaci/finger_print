@@ -1,9 +1,9 @@
 import 'dart:math';
 import 'package:animated_button/animated_button.dart';
 import 'package:confetti/confetti.dart';
+import '../constents/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../constents/app_strings.dart';
 import '../constents/my_texts.dart';
 import '../models/enums.dart';
 import '../constents/my_colors.dart';
@@ -22,7 +22,7 @@ class FingerPrintCtr extends GetxController {
   int tappingSecondCounter = 0;
   int tappingMaxSecond = 4;
   RxDouble tappingProgressTopPosition = 0.0.obs;
-  double progressMaxPositionValue = Get.width * 0.45;
+  // double progressMaxPositionValue = 0;
   ConfettiController confettiCtr = ConfettiController(duration: Duration(seconds: 1));
   bool get isWillGetAnswer => tappingSecondCounter == tappingMaxSecond;
 
@@ -34,10 +34,12 @@ class FingerPrintCtr extends GetxController {
     AudioType audioType = random == 1 ? AudioType.correct : AudioType.wrong;
     if (random == 1) {
       answer.value = AppStrings.congratulationsYouAreSincere;
+      answer.value = AppStrings.congratulationsYouAreSincere;
       animateAnswerColor(_tureAnswerColor);
 
       confettiCtr.play();
     } else {
+      answer.value = AppStrings.youAreALiar;
       answer.value = AppStrings.youAreALiar;
       animateAnswerColor(_falseAnswerColor);
     }
@@ -46,13 +48,13 @@ class FingerPrintCtr extends GetxController {
     confettiCtr.stop();
   }
 
-  void startTapping() async {
+  void startTapping(double progressMaxPositionValue) async {
     isTapping.value = true;
     answer.value = "";
     tappingSecondCounter = 0;
     leftAnswerColor.value = _defaultAnswerColor;
     rigthAnswerColor.value = _defaultAnswerColor;
-    updateTappingProgressPosition();
+    updateTappingProgressPosition(progressMaxPositionValue);
     while (isTapping.value) {
       if (isWillGetAnswer) {
         setAnswer();
@@ -63,7 +65,7 @@ class FingerPrintCtr extends GetxController {
     }
   }
 
-  void updateTappingProgressPosition() async {
+  void updateTappingProgressPosition(double progressMaxPositionValue) async {
     while (isTapping.value) {
       if (tappingProgressTopPosition.value < progressMaxPositionValue)
         tappingProgressTopPosition.value += progressMaxPositionValue;

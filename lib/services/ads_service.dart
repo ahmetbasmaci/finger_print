@@ -1,9 +1,11 @@
 // ignore_for_file: unused_field, constant_identifier_names
 
 import 'dart:io';
+import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 class AdsService {
+  static bool get dontUseAdds => true;
   static bool get _isTestMode {
     bool inDebugMode = false;
     assert(inDebugMode = true);
@@ -97,6 +99,8 @@ class AdsService {
   );
 
   static Future<void> createBannerId() async {
+    if (AdsService.bannerAd != null || dontUseAdds) return;
+
     bannerAd = BannerAd(
       size: AdSize.fullBanner,
       adUnitId: bannerId,
@@ -108,6 +112,7 @@ class AdsService {
   }
 
   static void createRewardedId() async {
+    if (AdsService.rewardedAd != null || dontUseAdds) return;
     await RewardedAd.load(
       adUnitId: rewardedId,
       request: AdRequest(),
@@ -136,6 +141,28 @@ class AdsService {
         },
       ),
     );
+  }
+
+  static void createAdds() {
+    if (dontUseAdds) return;
+
+    AdsService.createBannerId();
+    AdsService.createRewardedId();
+  }
+
+  static Future<void> showRewardedAdd({required VoidCallback onDone}) async {
+    if (dontUseAdds) {
+      onDone();
+      return;
+    }
+    createRewardedId();
+    try {
+      rewardedAd!.show(onUserEarnedReward: (_, reward) {
+        onDone();
+      });
+    } catch (e) {
+      onDone();
+    }
   }
 
   static void disposeAds() {

@@ -1,8 +1,8 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:confetti/confetti.dart';
+import '../../constents/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../constents/app_strings.dart';
 import '../../services/ads_service.dart';
 import 'ads_widgets.dart';
 import '../../constents/my_texts.dart';
@@ -108,13 +108,17 @@ class FingerPrint extends GetView<ThemeCtr> {
         child: Obx(
           () => fingerPrintCtr.isTapping.value
               ? DefaultTextStyle(
-                  style: TextStyle(fontSize: 30.0),
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 23.0,
+                  ),
                   child: AnimatedTextKit(
                     repeatForever: true,
                     pause: Duration(milliseconds: 10),
                     animatedTexts: [
                       ScaleAnimatedText(AppStrings.processingInspection, duration: Duration(milliseconds: 1500)),
-                      ScaleAnimatedText(AppStrings.fingerprintAnalysisInProgress, duration: Duration(milliseconds: 1500)),
+                      ScaleAnimatedText(AppStrings.fingerprintAnalysisInProgress,
+                          duration: Duration(milliseconds: 1500)),
                       ScaleAnimatedText(AppStrings.verifyingDingerprint, duration: Duration(milliseconds: 1500)),
                     ],
                   ),
@@ -163,7 +167,7 @@ class FingerPrint extends GetView<ThemeCtr> {
   }
 
   void onTapDown(TapDownDetails details) async {
-    fingerPrintCtr.startTapping();
+    fingerPrintCtr.startTapping(Get.width * 0.45);
   }
 
   void onTapUp(TapUpDetails details) {
