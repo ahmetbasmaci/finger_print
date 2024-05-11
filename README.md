@@ -1,4 +1,4 @@
-#  Finger Print
+#  Lie Detector
 
 <h1 align="center">
 <img src="https://github.com/ahmetbasmaci/finger_print/assets/96287253/c24c7d90-5de9-4ca5-a9ae-ffa163f3752b" width="200"> 
