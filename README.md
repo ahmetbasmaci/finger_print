@@ -36,12 +36,12 @@
 ## 🖼️ Overview
 
 <div style="background-color: #FFF00; overflow: auto; white-space: nowrap;">
-  <img src="https://github.com/ahmetbasmaci/finger_print/assets/96287253/66ac139a-2ccd-4190-8188-46d92bf9a345" alt="image" width="300" style="margin-right: 10px;">
-  <img src="https://github.com/ahmetbasmaci/finger_print/assets/96287253/e3b23ac6-8966-4982-8658-7b6dcd6ee9a8" alt="image" width="300" style="margin-right: 10px;">
-  <img src="https://github.com/ahmetbasmaci/finger_print/assets/96287253/88fdeb02-0704-4587-819a-a819d2684bfb" alt="image" width="300" style="margin-right: 10px;">
-  <img src="https://github.com/ahmetbasmaci/finger_print/assets/96287253/3b9b07d3-d429-4e4b-8eb7-861646c95d33" alt="image" width="300" style="margin-right: 10px;">
-  <img src="https://github.com/ahmetbasmaci/finger_print/assets/96287253/cd4834f2-c34b-4ac1-bbcf-2a8c2f15bf1e" alt="image" width="300" style="margin-right: 10px;">
-  <img src="https://github.com/ahmetbasmaci/finger_print/assets/96287253/9c5934ab-4d1e-4511-8c62-6cbfd4f2f4ae" alt="image" width="300" style="margin-right: 10px;">
+  <img src="https://github.com/ahmetbasmaci/finger_print/assets/96287253/66ac139a-2ccd-4190-8188-46d92bf9a345" alt="image" width="240" style="margin-right: 10px;">
+  <img src="https://github.com/ahmetbasmaci/finger_print/assets/96287253/e3b23ac6-8966-4982-8658-7b6dcd6ee9a8" alt="image" width="240" style="margin-right: 10px;">
+  <img src="https://github.com/ahmetbasmaci/finger_print/assets/96287253/88fdeb02-0704-4587-819a-a819d2684bfb" alt="image" width="240" style="margin-right: 10px;">
+  <img src="https://github.com/ahmetbasmaci/finger_print/assets/96287253/3b9b07d3-d429-4e4b-8eb7-861646c95d33" alt="image" width="240" style="margin-right: 10px;">
+  <img src="https://github.com/ahmetbasmaci/finger_print/assets/96287253/cd4834f2-c34b-4ac1-bbcf-2a8c2f15bf1e" alt="image" width="240" style="margin-right: 10px;">
+  <img src="https://github.com/ahmetbasmaci/finger_print/assets/96287253/9c5934ab-4d1e-4511-8c62-6cbfd4f2f4ae" alt="image" width="240" style="margin-right: 10px;">
   <!-- Add more <img> elements with the same style as above -->
 </div>
 
