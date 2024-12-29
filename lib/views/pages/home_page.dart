@@ -1,12 +1,10 @@
 import 'package:animated_button/animated_button.dart';
+import 'package:finger_print/views/pages/finger_print_page.dart';
 import '../../constents/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../constents/my_colors.dart';
 import '../../constents/my_texts.dart';
-import '../../services/ads_service.dart';
-import 'ads_widgets.dart';
-import 'finger_print_page.dart';
 import '../components/components.dart';
 
 class HomePage extends StatefulWidget {
@@ -21,12 +19,12 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    AdsService.createAdds();
+    //AdsService.createAdds();
   }
 
   @override
   void dispose() {
-    AdsService.disposeAds();
+    //AdsService.disposeAds();
     super.dispose();
   }
 
@@ -67,7 +65,8 @@ class _HomePageState extends State<HomePage> {
               width: Get.width * 0.8,
               color: MyColors.backgroundDark,
               onPressed: () {
-                AdsService.showRewardedAdd(onDone: () => Get.to(FingerPrint()));
+                Get.to(FingerPrint());
+                // AdsService.showRewardedAdd(onDone: () => Get.to(FingerPrint()));
               },
               child: MyTexts.main(
                 title: AppStrings.startNow,
@@ -78,7 +77,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      bottomNavigationBar: AdsWidgets.bannerWidget(),
+      //bottomNavigationBar: AdsWidgets.bannerWidget(),
     );
   }
 }
